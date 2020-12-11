@@ -16,8 +16,9 @@ class MyAgent(MLAgent):
     
 random.seed(1)
  
-my_agent = MyAgent()
+my_agent = MyAgent(alpha=0.9, epsilon=0.1) 
 random_agent = RandomAgent()
+
  
 train_and_plot(
     agent=my_agent,
@@ -25,3 +26,5 @@ train_and_plot(
     iterations=50,
     trainings=100,
     validations=1000)
+
+#Wanneer de alpha groter wordt gebruikt de computer vaker zetten die hij geleerd heeft en lukt het hem sneller om veel te winnen. Bij alpha 0.9 bereikt hij die piek al heel snel en bij een lagere alpha duurt dit langer
